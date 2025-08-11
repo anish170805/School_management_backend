@@ -2,7 +2,7 @@ import mysql from 'mysql2';
 import dotenv from 'dotenv';
 dotenv.config();
 
-const pool = mysql.createPool(`mysql://root:LmDFjpLfLbWgiHIkzDJgHTnYLyfUbPod@mysql.railway.internal:3306/railway`);
+const pool = mysql.createPool(`mysql://root:LmDFjpLfLbWgiHIkzDJgHTnYLyfUbPod@shuttle.proxy.rlwy.net:40352/railway`);
 
 (async () => {
   let connection;
