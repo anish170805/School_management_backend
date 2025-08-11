@@ -3,7 +3,7 @@ import getDistance from '../utils/distance.js';
 
 export const addSchool = async (req, res) => {
     try {
-        const { name, address, latitude, longitude } = req.body;
+        const { name, address, latitude, longitude, id } = req.body;
 
         if (!name || !address || latitude === undefined || longitude === undefined) {
             return res.status(400).json({ error: 'All fields are required' });
