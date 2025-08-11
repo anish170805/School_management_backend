@@ -17,7 +17,7 @@ export const addSchool = async (req, res) => {
         }
 
         const query = `INSERT INTO schools (id, name, address, latitude, longitude) VALUES (?,?, ?, ?, ?)`;
-        const [results] = await db.query(query, [name, address, lat, lon]);
+        const [results] = await db.query(query, [id, name, address, lat, lon]);
 
         res.status(201).json({ message: 'School added successfully', schoolId: results.insertId });
     } catch (error) {
